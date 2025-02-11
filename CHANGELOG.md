@@ -2,7 +2,7 @@
 
 ## UNRELEASED
 
-- Canonical link: If defined, use url of the piece over the page, and use the page url as canonical if `seoCanonical` is not set.
+- If defined, use url of the piece as canonical link over the page url, and use the page url if `seoCanonical` is not set.
 
 ## 1.6.1 (2023-03-06)
 
