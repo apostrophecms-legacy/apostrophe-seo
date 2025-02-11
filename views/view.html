@@ -21,9 +21,17 @@
   <meta name="google-site-verification" content="{{ data.global.seoGoogleVerificationId }}" />
 {% endif %}
 
-{% if data.page._seoCanonical  %}
-	<link rel="canonical" href="{{data.page._seoCanonical._url }}" />
+{% if data.piece %}
+  {% set url = data.piece._url %}
+{% else %}
+  {% if data.page._seoCanonical %}
+    {% set url = data.page._seoCanonical._url %}
+  {% else %}
+    {% set url = data.page._url %}
+  {% endif %}
 {% endif %}
+
+<link rel="canonical" href="{{ url }}" />
 
 {% if data.global.seoGoogleTrackingId %}
 <!-- Global site tag (gtag.js) - Google Analytics -->

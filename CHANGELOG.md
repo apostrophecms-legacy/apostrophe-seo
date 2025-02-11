@@ -1,5 +1,9 @@
 # Changelog
 
+## UNRELEASED
+
+- If defined, use url of the piece as canonical link over the page url, and use the page url if `seoCanonical` is not set.
+
 ## 1.6.1 (2023-03-06)
 
 - Removes `apostrophe` as a peer dependency.
