@@ -1,5 +1,9 @@
 # Changelog
 
+## UNRELEASED
+
+- Add canonical link for pieces.
+
 ## 1.7.0 (2025-02-12)
 
 - If defined, use url of the piece as canonical link over the page url, and use the page url if `seoCanonical` is not set.
