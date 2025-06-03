@@ -22,13 +22,9 @@
 {% endif %}
 
 {% if data.piece %}
-  {% set url = data.piece._url %}
+  {% set url = data.piece._seoCanonical._url or data.piece._url %}
 {% else %}
-  {% if data.page._seoCanonical %}
-    {% set url = data.page._seoCanonical._url %}
-  {% else %}
-    {% set url = data.page._url %}
-  {% endif %}
+  {% set url = data.page._seoCanonical._url or data.page._url %}
 {% endif %}
 
 <link rel="canonical" href="{{ url }}" />
