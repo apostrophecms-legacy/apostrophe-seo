@@ -22,12 +22,10 @@
 {% endif %}
 
 {% if data.piece %}
-  {% set url = data.piece._seoCanonical._url or data.piece._url %}
-{% else %}
-  {% set url = data.page._seoCanonical._url or data.page._url %}
+  <link rel="canonical" href="{{ data.piece._seoCanonical._url or data.piece._url }}" />
+{% elseif data.page %}
+  <link rel="canonical" href="{{ data.oage._seoCanonical._url or data.page._url }}" />
 {% endif %}
-
-<link rel="canonical" href="{{ url }}" />
 
 {% if data.global.seoGoogleTrackingId %}
 <!-- Global site tag (gtag.js) - Google Analytics -->
